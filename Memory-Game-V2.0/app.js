@@ -125,10 +125,15 @@ const tiles = [
         id: 24,
         name: "zebra",
         img: "images/zebra.png"
-    }
+    },
+    {
+        id: 25,
+        name: "panda",
+        img: "images/panda.png"
+    }    
 ]
    
-const difficultyButtons = document.querySelectorAll(".diff-buttons")
+const difficultyButtons = document.querySelectorAll(".diff-button")
 const startButton = document.querySelector(".game-start-button")
 const gameBox = document.querySelector(".game-box")
 const displayTime = document.querySelector(".time-display")
@@ -164,14 +169,14 @@ difficultyButtons.forEach(difficultyButton => difficultyButton.addEventListener(
 
 function assignDifficulty() {
     if (difficulty === "diff-easy") {
-        numberOfTilesToDraw = 10
-        time = 60000
+        numberOfTilesToDraw = 12
+        time = 80000
     } else if (difficulty === "diff-med") {
-        numberOfTilesToDraw = 15
-        time = 120000
+        numberOfTilesToDraw = 16
+        time = 150000
     } else if (difficulty === "diff-hard") {
         numberOfTilesToDraw = 20
-        time = 180000
+        time = 210000
     }
 
     // changes scoreDisplay (Best Times) to currently selected game difficulty on game start:
@@ -217,7 +222,6 @@ function gameTimer() {
 }
 
 function endGame() {
-    updateScores()
     resetStats()
     gameBox.innerHTML = "" //empties the board (also removes objects with class "empty")
     gameInProgress = false
@@ -229,6 +233,7 @@ function endGame() {
 
 // game ended successfully - player won
 function gameFinished() {
+    updateScores()
     endGame()
     window.alert("Congratulations, you won!")  // add a popup
 }
@@ -423,12 +428,12 @@ function timeDisplay() {
 //check if Best Scores already exist & if not, populate them with empty logs:
 let scoresInitialCheck = window.localStorage.getItem("scores")
 
-if (scoresInitialCheck === null) {
-    let zeroScores = [
+if (scoresInitialCheck === null) { 
+    let zeroScores = [ // change to function
         {
             id: "diff-easy",
             values: [
-                0,
+                0, 
                 0,
                 0
             ]
@@ -474,7 +479,6 @@ scoreDiffButtons.forEach(button => {
 function displayScores(scoreDisplayDifficulty) {
     scores.forEach( score => {
         if (score.id === scoreDisplayDifficulty) {
-            console.log(score.values[0])
             parseScoreTime(score.values[0], firstScore)
             parseScoreTime(score.values[1], secondScore)
             parseScoreTime(score.values[2], thirdScore)
@@ -506,7 +510,7 @@ function parseScoreTime(scoreValue, scoreDisplay) {
 }
 
 // updates score array after game end
-function updateScores() {
+function updateScores() {                                           // array.find()
     scores.forEach( score => {
         if (score.id === difficulty) {  // Frankenstein would be proud
             for (let i = 0; i < score.values.length; i++) {
@@ -525,3 +529,19 @@ function updateScores() {
 }
 
 // ADD NAMES/HANDLES?
+
+// ------- POP-UPs Behaviour: ------- 
+
+const exitButton = document.querySelector(".popup-exit")
+
+const popupWindow = document.querySelector(".popup-box")
+// const popupWindow = document.querySelector(".popup-box")
+// const popupWindow = document.querySelector(".popup-box")
+// const popupWindow = document.querySelector(".popup-box")
+// const popupWindow = document.querySelector(".popup-box")
+// const popupWindow = document.querySelector(".popup-box")
+// const popupWindow = document.querySelector(".popup-box")
+
+exitButton.addEventListener("click", () => {
+    popupWindow.style.display = "none"
+})
