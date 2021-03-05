@@ -47,15 +47,13 @@ body {
 
 .game-box{
     width: 70%;
-    min-height: 50vh;
+    min-height: 60vh;
     padding: 1% 1%;
 
 
     display: flex;
     flex-wrap: wrap;
-
-    /* gap: 1%; */
-
+    justify-content: space-around;
 
     border-radius: 10px 0px 0px 10px;
 
@@ -189,7 +187,7 @@ TO KEEP THE SIZE OF THE "SLOT" THE SAME */
 
 
 
-.time {
+.stats {
     height: 20%;
     width: 100%;
 
@@ -199,7 +197,8 @@ TO KEEP THE SIZE OF THE "SLOT" THE SAME */
 
 .pairs-left {
     width: 60%;
-    margin: 1% auto 2%;
+
+    margin: 0% auto 5%;
 
     font-size: 16px;
 }
@@ -211,7 +210,7 @@ TO KEEP THE SIZE OF THE "SLOT" THE SAME */
 
 .time-display {
     width: 60%;
-    margin: 2% auto 1%;
+    margin: 5% auto 0%;
 
     font-size: 16px;
 }
@@ -324,8 +323,6 @@ TO KEEP THE SIZE OF THE "SLOT" THE SAME */
 
 /* ----- POP UPS STYLING: ----- */
 
-
-
 .popup-box {
     width: 40%;
     height: 30%;
@@ -343,8 +340,6 @@ TO KEEP THE SIZE OF THE "SLOT" THE SAME */
     flex-wrap: wrap;
 
     background-color: rgba(255, 255, 255, 0.9);
-    
-    display: flex;
     display: none;
 }
 
@@ -357,7 +352,7 @@ TO KEEP THE SIZE OF THE "SLOT" THE SAME */
     width: 36px;
     height: 36px;
 
-    margin: 1% 90%;
+    margin: 1% 92.5%;
 
     border: 3px black solid;
     border-radius: 50%;
@@ -380,57 +375,116 @@ TO KEEP THE SIZE OF THE "SLOT" THE SAME */
     color: #84c8ff;
 }
 
-.popup-new-input {
+.popup-content-box {
     width: 80%;
-    height: 80%;
+    height: 90%;
 
+    margin: 0% auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    text-align: center;
+}
+
+.popup-input {
+    display: none;
+}
+
+.popup-input-form {
+    width: 90%;
+
+    margin: 0% auto;
+}
+
+.popup-input-congratulations {
+    font-size: 2em;
+
+    display: block;
     margin: 5% auto;
 }
 
-.popup-new-input-form {
-    width: 90%;
+.popup-input-name-prompt {
+    font-size: 1.1em;
+    display: block;
+    margin: 5% auto;
 }
 
-.form-length-message {
-    display: none;
-}
 
 .form-button {
+    display: block; 
+
+    margin: 2% auto;
+
+    width: 33.33%;
+    height: 200%;/* replace with actual styling */
+    min-height: 30px;
+    padding: 0%;
+
+    border-radius: 5%;
+    border: 0px;
+    background-color: #269dff;
+
+    transition: 0.5s;
+}
+
+.form-button:hover {
+    background-color: #84c8ff;
+    transition: 0.5s;
+}
+
+.popup-confirmation {
+    display: none;
+}
+
+.popup-confirmation-text {
+
+    margin: 7% auto;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: column;
+
+    justify-content: stretch;   
+}
+
+.score-updated-message {
+    font-size: 18px;
+
     display: block;
+    width: 200%;
 }
 
-.popup-new-check {
-    display: none;
-
-
+.play-again-prompt {
+    display: block;
+    width: 200%;
 }
 
-.popup-new-input-repeat {
-    display: none;
-
-
+.popup-confirmation-buttons {
+    margin: 5% auto;
 }
 
-.popup-new-check-repeat {
-    display: none;
+.popup-button {
 
+    margin: 0% auto;
+    width: 33.33%;
+    height: 100%;    
+    min-height: 30px;
+    max-width: 150px;
+    padding: 0%;
 
+    border-radius: 5%;
+    border: 0px;
+    background-color: #269dff;
+
+    transition: 0.5s;
 }
 
-.popup-update {
-    display: none;
-
-
-}
-
-.popup-fail {
-    display: none;
-
-
-}
-
-.popup-fail-bot-check {
-    display: none;
-
-
+.popup-button:hover {
+    background-color: #84c8ff;
+    transition: 0.5s;
 }
