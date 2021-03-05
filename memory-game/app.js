@@ -441,8 +441,8 @@ function timeDisplay() {
 // ----- BEST SCORES: -----
 
 //check if Best Scores already exist & if not, populate them with empty logs:
-let scoresInitialCheck = window.localStorage.getItem("scores")
-let savedNameDownloaded = JSON.parse(localStorage.getItem("savedName"))
+let scoresInitialCheck = window.localStorage.getItem("memory-scores")
+let savedNameDownloaded = JSON.parse(localStorage.getItem("memory-savedName"))
 
 if (scoresInitialCheck === null) { 
     let zeroScores = [ // change to function
@@ -498,7 +498,7 @@ if (scoresInitialCheck === null) {
             ]
         }
     ]
-    window.localStorage.setItem("scores", JSON.stringify(zeroScores))
+    window.localStorage.setItem("memory-scores", JSON.stringify(zeroScores))
 }
 
 const scoreDiffButtons = document.querySelectorAll(".score-diff-button")
@@ -511,7 +511,7 @@ const secondName = document.querySelector(".second-name")
 const thirdName = document.querySelector(".third-name")
 
 // pull best times
-let scores = JSON.parse(window.localStorage.getItem("scores"))
+let scores = JSON.parse(window.localStorage.getItem("memory-scores"))
 let scoreDisplayDifficulty
 
 let nameChosen
@@ -594,7 +594,7 @@ function updateScores() {                  // scores.find( score => score.id ===
 
                     score.values.splice(i, 0, newScore)
                     score.values.pop()
-                    localStorage.setItem("scores", JSON.stringify(scores))
+                    localStorage.setItem("memory-scores", JSON.stringify(scores))
                     break
                 }
             }
@@ -622,7 +622,7 @@ function autoUpdateScores() {                  // scores.find( score => score.id
 
                     score.values.splice(i, 0, newScore)
                     score.values.pop()
-                    localStorage.setItem("scores", JSON.stringify(scores))
+                    localStorage.setItem("memory-scores", JSON.stringify(scores))
                     break
                 }
             }
@@ -659,7 +659,7 @@ exitButton.addEventListener("click", () => {
 })
 
 function updateSavedName() {
-    localStorage.setItem("savedName", JSON.stringify(savedName))
+    localStorage.setItem("memory-savedName", JSON.stringify(savedName))
 }
 
 nameConfirmBtn.addEventListener("click", () => {
