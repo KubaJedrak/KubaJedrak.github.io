@@ -1,0 +1,236 @@
+* {
+    font-family: 'Open Sans Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,4096ee+100 */
+    background: #000000; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #000000 0%, #4096ee 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #000000 0%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #000000 0%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#4096ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.stats {
+    width: 100%;
+    height: 80%;
+}
+
+.misc-stats {
+    width: 100%;
+    height: 15%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tf-buttons {
+    width: 30%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.misc-stat {
+    width: 40%;
+    height: 90%;
+
+    border-radius: 10px;
+    border: 1px solid rgb(85, 85, 85);
+    background-color: rgba(255, 255, 255, 0.4);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat-container {
+    width: 100%;
+    height: 85%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.stat {
+    width: 90%;
+    height: 12%;
+    margin: 2% auto;
+    padding: 0;
+
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.stat-img-container {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-stat {
+    width: 130%;
+    height: 130%;
+
+    align-self: center;
+}
+
+.stat-buttons {
+    width: 80%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat-buttons-section {
+    width: 45%;
+    height: 50%;
+
+
+    display: flex;
+
+    border-radius: 5px;
+        
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+
+.stat-button {
+    width: 30%;
+    height: 100%;
+
+    margin: 0 auto;
+
+    background: #a0a0a0;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    align-self: center;
+}
+
+.stat-button-misc {
+    width: 90%;
+    height: 50%;
+    margin: 5% auto;
+
+    background: #a0a0a0;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+}
+
+.stat-display {
+    display: inline-block;
+    width: 40%;
+    /* height: 50%; */
+
+    text-align: center;
+    align-self: center;
+}
+
+.stat-text {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.stat-button-img {
+    width: 100%;
+    height: 100%;
+
+    margin: -6px;
+
+}
+
+.title-text {
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+.stat-display-text {
+    width: 25%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.menu {
+    width: 100%;
+    height: 8%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.menu-button-full {
+    width: 15%;
+    height: 90%;
+
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.menu-button-mini {
+    width: 12%;
+    height: 60%;
+}
+
+
+img {
+    width: 25px;
+    height: 25px;
+
+    padding: 4px 0px 0px 1px; /* change later */
+}
+
+.img-stat-misc {
+    width: 50px;
+    height: 50px;
+}
+
+.img-stat {
+    width: 50px;
+    height: 50px;
+
+    align-self: center;
+}
+
+/* .img-menu-big {
+    width: 100%;
+    height: 100%;
+} */
