@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terraforming Mars Point Counter Lite</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+
+    <script src="app.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="point-counter">
+
+            <div class="title">
+                <h1 class="title-text"> Terraforming Mars PT </h1>
+            </div>
+    
+            <div class="stats">
+    
+                <div class="misc-stats">
+    
+                    <div class="misc-stat terraformation-factor">
+                        <img src="images/planet-green.png" class="img img-stat-misc">
+                        <span class="tf-display stat-display-text"></span>
+                        <div class="tf-buttons">
+                            <button class="tf-button-up stat-button-misc">
+                                <img src="images/up-arrow.png">
+                            </button>
+                            <button class="tf-button-down stat-button-misc">
+                                <img src="images/down-arrow.png">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="misc-stat generation">
+                        <img src="images/generation-alt.png" class="img img-stat-misc">
+                        <span class="gen-display stat-display-text"></span>
+                    </div>
+    
+                </div>
+    
+                <div class="stat-container">
+    
+    
+                    <div class="stat stat-money">
+    
+                        <div class="stat-img-container">
+                            <img src="images/money-coin.png" class="img-stat">                        
+                        </div>
+    
+                        <div class="stat-buttons">
+    
+                            <div class="stat-buttons-section stat-buttons-production">
+                                
+                                <button class="stat-button stat-button-down stat-button-production-down-money">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-production stat-money-production-display" id="moneyProdDisplay"> 0 </span>                   
+                                <button class="stat-button stat-button-up stat-button-production-up-money">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+    
+                            </div>
+    
+                            <div class="stat-buttons-section stat-buttons-store">
+    
+                                <button class="stat-button stat-button-down stat-button-store-down-money">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-store stat-money-store-display"> 43 </span>
+                                <button class="stat-button stat-button-up stat-button-store-up-money">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="stat stat-plants">
+    
+                        <div class="stat-img-container">
+                            <img src="images/leaf.png" class="img-stat">                        
+                        </div>
+    
+                        <div class="stat-buttons">
+    
+                            <div class="stat-buttons-section stat-buttons-production">
+                                
+                                <button class="stat-button stat-button-down stat-button-production-down-plants">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-production stat-plants-production-display" id="plantsProdDisplay"> 0 </span>                   
+                                <button class="stat-button stat-button-up stat-button-production-up-plants">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+    
+                            </div>
+    
+                            <div class="stat-buttons-section stat-buttons-store">
+    
+                                <button class="stat-button stat-button-down stat-button-store-down-plants">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-store stat-plants-store-display"> 0 </span>
+                                <button class="stat-button stat-button-up stat-button-store-up-plants">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                    <div class="stat stat-titanium">
+    
+                        <div class="stat-img-container">
+                            <img src="images/star.png" class="img-stat">                        
+                        </div>
+    
+                        <div class="stat-buttons">
+    
+                            <div class="stat-buttons-section stat-buttons-production">
+                                
+                                <button class="stat-button stat-button-down stat-button-production-down-titanium">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-production stat-titanium-production-display"  id="titaniumProdDisplay"> 0 </span>                   
+                                <button class="stat-button stat-button-up stat-button-production-up-titanium">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+    
+                            </div>
+    
+                            <div class="stat-buttons-section stat-buttons-store">
+    
+                                <button class="stat-button stat-button-down stat-button-store-down-titanium">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-store stat-titanium-store-display"> 0 </span>
+                                <button class="stat-button stat-button-up stat-button-store-up-titanium">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                    <div class="stat stat-steel">
+    
+                        <div class="stat-img-container">
+                            <img src="images/beam-gray.png" class="img-stat">                        
+                        </div>
+    
+                        <div class="stat-buttons">
+    
+                            <div class="stat-buttons-section stat-buttons-production">
+                                
+                                <button class="stat-button stat-button-down stat-button-production-down-steel">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-production stat-steel-production-display" id="steelProdDisplay"> 0 </span>                   
+                                <button class="stat-button stat-button-up stat-button-production-up-steel">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+    
+                            </div>
+    
+                            <div class="stat-buttons-section stat-buttons-store">
+    
+                                <button class="stat-button stat-button-down stat-button-store-down-steel">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-store stat-steel-store-display"> 0 </span>
+                                <button class="stat-button stat-button-up stat-button-store-up-steel">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                    <div class="stat stat-energy">
+    
+                        <div class="stat-img-container">
+                            <img src="images/energy-purple.png" class="img-stat">                        
+                        </div>
+    
+                        <div class="stat-buttons">
+    
+                            <div class="stat-buttons-section stat-buttons-production">
+                                
+                                <button class="stat-button stat-button-down stat-button-production-down-energy">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-production stat-energy-production-display" id="energyProdDisplay"> 0 </span>                   
+                                <button class="stat-button stat-button-up stat-button-production-up-energy">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+    
+                            </div>
+    
+                            <div class="stat-buttons-section stat-buttons-store">
+    
+                                <button class="stat-button stat-button-down stat-button-store-down-energy">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-store stat-energy-store-display"> 0 </span>
+                                <button class="stat-button stat-button-up stat-button-store-up-energy">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+                    <div class="stat stat-heat">
+    
+                        <div class="stat-img-container">
+                            <img src="images/fire.png" class="img-stat">                        
+                        </div>
+    
+                        <div class="stat-buttons">
+    
+                            <div class="stat-buttons-section stat-buttons-production">
+                                
+                                <button class="stat-button stat-button-down stat-button-production-down-heat">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-production stat-heat-production-display" id="heatProdDisplay"> 0 </span>                   
+                                <button class="stat-button stat-button-up stat-button-production-up-heat">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+    
+                            </div>
+    
+                            <div class="stat-buttons-section stat-buttons-store">
+    
+                                <button class="stat-button stat-button-down stat-button-store-down-heat">
+                                    <img src="images/down-arrow.png" class="stat-button-img">
+                                </button>
+                                <span class="stat-text stat-display stat-display-store stat-heat-store-display"> 0 </span>
+                                <button class="stat-button stat-button-up stat-button-store-up-heat">
+                                    <img src="images/up-arrow.png" class="stat-button-img">
+                                </button>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+            
+                </div>
+    
+            </div>
+
+        </div>
+                
+        <div class="point-calculator">
+            <form class="calculator-form">
+                <input type="text" class="calculator-form-input input-styling" name="input-tf" id="input-tf" placeholder="Terraformation Quotient">
+                <input type="text" class="calculator-form-input input-styling" name="input-b" id="input-b" placeholder="Board">
+                <input type="text" class="calculator-form-input input-styling" name="input-ta" id="input-ta" placeholder="Titles & Awards">
+                <input type="text" class="calculator-form-input input-styling" name="input-o" id="input-o" placeholder="Other">
+            </form>
+
+            <button class="calculator-form-button input-styling">Calculate</button>
+
+            <article class="point-calculator-result">
+                Your total score is: <span class="point-calculator-result-display input-styling">0</span> 
+            </article>
+
+
+        </div>
+
+
+
+        <div class="menu">
+
+            <img src="images/calc.png" class="menu-button menu-button-mini button-calculator img-menu-mini">
+
+
+            <img src="images/next.png" class="menu-button menu-button-full button-next-gen img-menu-big">
+
+
+            <img src="images/new.png" class="menu-button menu-button-mini button-new img-menu-mini">
+
+
+        </div>
+    
+    </div>
+
+</body>
+</html>
