@@ -27,6 +27,11 @@ body {
     height: 100%;
 }
 
+.point-counter {
+    width: 100%;
+    height: 90%;
+}
+
 .stats {
     width: 100%;
     height: 80%;
@@ -48,7 +53,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: stretch;
 }
 
 .misc-stat {
@@ -234,3 +238,74 @@ img {
     width: 100%;
     height: 100%;
 } */
+
+.point-calculator {
+    width: 100%;
+    height: 80%;
+    display: none;
+
+    /* animation: enterLeft;
+    animation-duration: 1s; */
+}
+
+.calculator-form {
+    width: 100%;
+    margin: 10% auto 5%;
+}
+
+.calculator-form-input {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    font-size: 24px;
+}
+
+.input-styling {
+    border-radius: 10px;
+    border: black 1px;
+}
+
+.calculator-form-button {
+    display: block;
+    font-size: 24px;
+
+    width: 50%;
+    margin: 0 auto;
+}
+
+.point-calculator-result {
+    width: 80%;
+    margin: 10% auto;
+
+    color: white;
+    font-size: 24px;
+}
+
+.point-calculator-result-display {
+    display: inline-block;
+    background-color: white;
+
+    width: 20%;
+    margin: 0 auto;
+
+    color: black;
+    text-align: center;
+}
+
+/* @keyframes exitLeft {
+    0% {left: 0%;}
+    100% {left: 100%}
+}
+
+@keyframes enterLeft {
+    0% {left: 100%}
+    100% {left: 0%}
+} */
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 40%;
+        
+        margin: 0 auto;
+    }
+}

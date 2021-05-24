@@ -356,10 +356,61 @@ heatStoreDown.addEventListener("click", () => {
     updateDisplays()
 })
 
-buttonNextGen.addEventListener("click", advanceGeneration)
+buttonNextGen.addEventListener("click", () => {
+    if (window.getComputedStyle(pointCounter).display === "block") {
+        advanceGeneration()
+    }
+})
 // buttonNewGame.addEventListener("click", newGame)
 
 //------------------------------------------------
 //------------------------------------------------
 
+const calcInputTF = document.querySelector("#input-tf")
+const calcInputBoard = document.querySelector("#input-b")
+const calcInputTA = document.querySelector("#input-ta")
+const calcInputOther = document.querySelector("#input-o")
+const inputConfirmButton = document.querySelector(".calculator-form-button")
 
+const pointResultDisplay = document.querySelector(".point-calculator-result-display")
+
+
+
+inputConfirmButton.addEventListener("click", () => {
+    const inputs = [calcInputTF, calcInputBoard, calcInputTA]
+    const inputValues = []
+    
+    inputs.forEach( input => {
+        inputValues.push(parseInt(input.value, 10))
+    })
+
+    function calculateTotal() {
+        let splitOthers = []
+        let parsedInputs = []
+        let allInputs = []
+        const reducer = (accumulator, currentValue) => accumulator + currentValue
+
+        splitOthers = calcInputOther.value.split("+")
+        splitOthers.forEach( element => {
+            parsedInputs.push(parseInt(element, 10))
+        })
+
+        allInputs = inputValues.concat(parsedInputs)
+        pointResultDisplay.innerText = allInputs.reduce(reducer)
+    }
+    calculateTotal()
+})
+
+const pointCounter = document.querySelector(".point-counter")
+const pointCalculator = document.querySelector(".point-calculator")
+
+buttonCalc.addEventListener("click", () => {
+    if (window.getComputedStyle(pointCalculator).display === "none") {
+        pointCounter.style.display = "none"
+        pointCalculator.style.display = "block"
+    }
+    else if (window.getComputedStyle(pointCounter).display === "none") {
+        pointCounter.style.display = "block"
+        pointCalculator.style.display = "none"
+    }
+})
